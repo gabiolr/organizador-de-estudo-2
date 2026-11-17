@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "projeto-trio"
+version = "0.1.0"
+description = "Projeto desenvolvido pela equipe"
+authors = []
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+fastapi = {extras = ["standard"], version = "*"}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+httpx = "*"
+ruff = "*"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["teste"]
+
+[tool.ruff]
+line-length = 79
